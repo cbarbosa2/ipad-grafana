@@ -1,5 +1,6 @@
-# Start
+# Start locally
 
 ```
-node index
+node index.js
 ```
+
