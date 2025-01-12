@@ -5,7 +5,7 @@ const app = express();
 const port = 8080;
 
 const dashboard =
-  "http://wyse.local:3000/d/AmvH_Qb4k/display?orgId=1&refresh=5s&kiosk";
+  "http://bee.local:3000/d/AmvH_Qb4k/display?orgId=1&refresh=5s&kiosk";
 
 let browser;
 let page;
