@@ -1,0 +1,13 @@
+[Unit]
+Description=Ipad Grafana
+After=network.target
+
+[Service]
+Type=simple
+User=carlos
+ExecStart=/usr/bin/node /home/carlos/ipad-grafana/index.js
+WorkingDirectory=/home/carlos/ipad-grafana/
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
