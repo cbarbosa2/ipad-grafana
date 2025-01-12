@@ -19,24 +19,17 @@
   <body>
     <img src="/grafana" style="width:100%" id="myImage" />
     <div>
-    <a href="http://wyse.local:1880">Node-Red</a> |
-    <a href="http://wyse.local:9080">BT</a> | 
-    <a href="http://wyse.local:32400">Plex</a> | 
-    <a href="http://wyse.local:9117">Jackett</a> | 
-    <a href="http://wyse.local:7878">Radarr</a> |
-    <a href="http://wyse.local:8989">Sonarr</a> |
-    <a href="http://wyse.local:6767">Bazarr</a> |
-    <a href="http://wyse.local:3000">Grafana</a> | 
-    <a href="http://wyse.local:8123">Home Assistant</a> |
-    <a href="http://wyse.local:9090">Prometheus</a>
-    <a href="http://wyse.local:9696">Prowlarr</a>
-    <a href="http://wyse.local:2283">Immich</a>
+    <a href="http://bee.local:1880">Node-Red</a> |
+    <a href="http://bee.local:9080">BT</a> | 
+    <a href="http://bee.local:3000">Grafana</a> | 
+    <a href="http://bee.local:9090">Prometheus</a>
+    <a href="http://bee.local:2283">Immich</a>
     </div>
   </body>
   <script>
     setInterval(function () {
       var myImageElement = document.getElementById("myImage");
       myImageElement.src = "/grafana?rand=" + Math.random();
-    }, 15000);
+    }, 5000);
   </script>
 </html>
