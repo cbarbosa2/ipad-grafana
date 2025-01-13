@@ -71,19 +71,12 @@ async function openBrowser() {
 }
 
 async function generateScreenshot() {
-  const startTime = Date.now();
   try {
     if (!browser || !page) {
       await openBrowser();
     }
     
-    if (!isFirstLoad) {
-      // Use reload for subsequent requests - much faster
-      await page.reload({ 
-        waitUntil: "networkidle2",
-        timeout: 30000
-      });
-    } else {
+    if (isFirstLoad) {
       // First load after recovery
       await page.goto(dashboard, { 
         waitUntil: "networkidle2",
@@ -93,9 +86,6 @@ async function generateScreenshot() {
     }
 
     await page.screenshot({ path: "grafana.png", omitBackground: true });
-
-    const duration = Date.now() - startTime;
-    console.log(`Screenshot generated in ${duration}ms`);
   } catch (error) {
     console.error('Screenshot generation failed:', error);
     // Reset state and attempt to recover
